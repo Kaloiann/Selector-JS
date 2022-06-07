@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 32px;
+    transition: 0.3s ease-in-out;
+}
+.selector {
+    width: fit-content;
+}
+.option:focus {
+    outline: 1px solid #000;
+    background: #ccc;
+    margin-top: 0 !important;
+}
+.select-menu {
+    background: #eee;
+    padding: 25px;
+    display: flex;
+    gap: 35px;
+}
+.option {
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0 25px;
+    cursor: pointer;
+    border-bottom: solid 1px thistle;
+}
+.option:hover {
+    background: #fff;
+    border-color: black;
+    font-size: larger;
+}
+.selector.open .option {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+}
+.selector.open .arrow {
+    transform: rotate(90deg);
+    transition: 0.3s ease-in-out;
+}
+.arrow {
+    transform: rotate(-90deg);
+    transition: 0.3s ease-in-out;
+}
